@@ -1,0 +1,380 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  overflow: hidden;
+  box-shadow: 4px 4px 5px cyan;
+  box-sizing: inherit;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  position: relative;
+  width: inherit;
+  box-shadow: 4px 4px 5px cyan;
+}
+
+header:hover {
+  color: cyan;
+  transform: scale(3.2, 1.1);
+}
+.navi {
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+ul {
+  display: flex;
+  overflow: hidden;
+  justify-items: center;
+  justify-content: right;
+  grid-auto-flow: row;
+  grid-gap: 20px;
+  margin: auto;
+  list-style: none;
+  background-color: inherit;
+  transform-style: preserve-3d;
+}
+
+li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 3px solid cyan;
+  border-radius: 200px;
+  justify-content: center;
+  box-shadow: 4px 4px 5px cyan;
+}
+
+li:hover {
+  animation: wave-animation 0.3s infinite;
+  border-radius: 50px;
+  box-shadow: inset 0 -1em 2em cyan;
+  transform: scale(1.1, 1.1);
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.navi li:nth-child(1) {
+  background-color: cyan;
+  border: 3px solid cyan;
+  border-radius: 200px;
+}
+
+.searchinput {
+    border: none;
+    background: none;
+    outline:none;
+    float: left;
+    padding: 0;
+    color: #FAFAFA;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0px;
+}
+
+.searchbox {
+    float: right;
+    padding: 0;
+    background: #2f3640;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% ,50%);
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+.searchbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2f3640;
+    float: right;
+    transition: 0.4s;
+    color: #FAFAFA;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+
+
+.searchbutton:hover {
+    background: #2f3640;
+    color: #FAFAFA;
+}
+
+.searchbox:hover >.searchinput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchbox:hover > .searchbutton {
+    background: #FAFAFA;
+    color: #2f3640;
+}
+
+@media screen and (max-width: 620px){
+    .searchbox:hover > .searchinput {
+        width: 250px;
+        padding: 0 6px;
+    }
+} 
+
+.intros {
+  margin: 20px 20px;
+  height: 30rem;
+  width: 95%;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  box-shadow: 20px 20px 10px rgba(0, 255, 255, 0.726);
+  animation: slider 40s linear infinite;
+}
+
+@keyframes slider {
+  0%{
+    background-image: url('/images/1.jpg');
+  }
+    10%{
+    background-image: url('/images/2.jpg');
+  }
+    20%{
+    background-image: url('/images/4.jpg');
+  }
+    30%{
+    background-image: url('/images/3.jpg');
+  }
+    40%{
+    background-image: url('/images/4.jpg');
+  }
+    50%{
+    background-image: url('/images/2.jpg');
+  }
+    60%{
+    background-image: url('/images/6.jpg');
+  }
+    70%{
+    background-image: url('/images/1.jpg');
+  }
+    80%{
+    background-image: url('/images/3.jpg');
+  }
+    90%{
+    background-image: url('/images/2.jpg');
+  }
+    100%{
+    background-image: ('/images/3.jpg');
+  }
+}
+
+.sidefomulogin{
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  border-radius: 20px;
+  background-color: #2f3640;
+  color: whitesmoke;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.usernameinput , .pswdinput {
+    border: none;
+    background: none;
+    outline:none;
+    float: left;
+    padding: 0;
+    color: #FAFAFA;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0px;
+}
+
+.usernamebox ,.paswdbox{
+    float: right;
+    padding: 0;
+    background: #2f3640;
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% ,50%);
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+.usernamebutton , .pswdbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2f3640;
+    float: right;
+    transition: 0.4s;
+    color: #FAFAFA;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+
+
+.usernamebutton:hover{
+    background: #2f3640;
+    color: #FAFAFA;
+}
+
+.usernamebox:hover >.usernameinput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.usernamebox:hover > .usernamebutton {
+    background: #FAFAFA;
+    color: #2f3640;
+}
+
+@media screen and (max-width: 620px){
+    .usernamebox:hover > .usernameinput {
+        width: 250px;
+        padding: 0 6px;
+    }
+} 
+
+
+.pswdbutton:hover{
+    background: #2f3640;
+    color: #FAFAFA;
+}
+
+.mailist {
+    border:2px solid wheat;
+    background: #2f3640;
+    float: left;
+    padding: 0;
+    color: #FAFAFA;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 300px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.paswdbox:hover > .pswdinput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.paswdbox:hover > .pswdbutton {
+    background: #FAFAFA;
+    color: #2f3640;
+}
+
+@media screen and (max-width: 620px){
+    .usernamebox:hover > .pswdinput {
+        width: 250px;
+        padding: 0 6px;
+    }
+} 
+
+.submiti1 , .submiti2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 70px;
+    border-radius: 50%;
+    background: #2f3640;
+    color: #FAFAFA;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+.a {
+  color: #0051ff;
+}
+
+.melinput {
+    border: none;
+    background: none;
+    outline:none;
+    float: left;
+    padding: 0;
+    color: #FAFAFA;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0px;
+}
+
+.melibox {
+    float: right;
+    padding: 0;
+    background: #2f3640;
+    position: inherit;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% ,50%);
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+.melibutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2f3640;
+    float: right;
+    transition: 0.4s;
+    color: #FAFAFA;
+    box-shadow: 4px 4px 5px cyan;
+}
+
+
+
+.melibutton:hover {
+    background: #2f3640;
+    color: #FAFAFA;
+}
+
+.melibox:hover >.searchinput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.melibox:hover > .melibutton {
+    background: #FAFAFA;
+    color: #2f3640;
+}
+
+@media screen and (max-width: 620px){
+    .melibox:hover > .melinput {
+        width: 250px;
+        padding: 0 6px;
+    }
+}
